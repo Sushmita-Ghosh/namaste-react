@@ -30,7 +30,7 @@ const HeadingComponent = () => (
   </div>
 );
 
-const root = React.getElementById("root");
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<HeadingComponent />);
 ```
 
