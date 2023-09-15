@@ -19,3 +19,13 @@ It works fine but not recommended.
 ### Default exports & Named exports
 
 Default exports are fine- but 1 file can have a single default export
+For exporting multiple things from a file we need to use named export.
+
+- Named Export: export const const_url = "www.google.com"
+- Default Export:
+  ```javascript
+  const url = "www.google.com";
+  export default url;
+  ```
+
+### Can I use default and named exports in the same components.
