@@ -19,3 +19,8 @@
 - HTTPs support
 - Tree Shaking - removes unused code from repository.
 - Different production & dev bundles
+
+# Repos:
+
+1. [Namaste React Cheatsheet For Setup]("https://github.com/Learn-React-With-Harshi/namaste-react-project-setup-cheatsheet")
+2.
