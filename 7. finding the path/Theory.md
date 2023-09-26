@@ -13,5 +13,18 @@
 
 - createBrowserRouter: This will create the roting configurations as we provide an array of objects - containing path & element
 - RouterProvider: provides the configuration to our app - connected
+- useRouteError - gives us properties to show when we are on error page- like error.status , statusText
+- Outlet - to load the children routes in the outlet - this outlet will be replaced the componets according to the path. We will not see any "Outlet" component
 
-###
+### children-routes:
+
+Say you have header & footer which are fixed for you app but you app's body will change based on the routes
+to implement such a functionality we need children routes
+WE can use the Outlet component provided by react-router-dom
+-We can define the children routes in children property
+
+### React- changing routes
+
+If we want to link another page in homepage- we should not use anchor tags- anchor tags will result to load the whole page and it defeats the purpose of SPA
+
+We can use "Link" component to route to diff components - not result in reload of pages

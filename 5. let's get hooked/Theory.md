@@ -1,4 +1,4 @@
-### WHat are React Hooks?
+### What are React Hooks?
 
 A hook is a normal JS func that is given by React- these are prebuilt - comes with utilies
 
