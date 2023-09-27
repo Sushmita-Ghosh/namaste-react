@@ -65,3 +65,4 @@ If react finds more than 1 child - react will batch the render phase together an
 
   - async functions implicitly return a promise, and;
   - useEffect expects its callback to either return nothing or a clean-up function.
+    [REF](https://www.designcise.com/web/tutorial/why-cant-react-useeffect-callback-be-async)
