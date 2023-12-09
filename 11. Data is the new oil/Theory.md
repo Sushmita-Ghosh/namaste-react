@@ -32,5 +32,50 @@ RestaurantMenu -> RestaurantCategory -> ItemList
 Suppose if we want to pass the a data from RestaurantMenu -> ItemList we need to always pass the props to RestaurantCategory - not directly . We will have to access the intermidiate parents.
 Suppose our react app has 7 layers of nesting - we will still have to pass the props to all the componnets even if they do not use it .
 
-`Context`
-We can use something known as the context - which is kind of a global place to store all our states - accessible to all our components.
+### Context:
+
+We can use something known as the context - which is kind of a global place to store all our states - accessible to all our components - Solves props drilling.
+
+`Example:`
+
+- LoggedIn User Info
+- Theme
+
+`Steps:`
+
+1. Create a context - using createContext
+
+```javascript
+import { createContext } from "react";
+
+const UserContext = createContext({
+  loggedInUser: "Default User",
+});
+
+export default UserContext;
+```
+
+2. Context Provider - to update the context value anywhere in you app - Wrap you root component with UserContext.Provider
+
+```jsx
+<UserContext.Provider value={{loggedInUser: userName}}>
+    <App>
+</UserCOntext.Provider>
+```
+
+3. Use the context - useContext
+
+```javascript
+import { useContext } from "react";
+const user = useContext(UserContext);
+```
+
+- If class based components we can use .Consumer - takes in a callback
+
+```jsx
+<UserContext.Consumer>
+    {({user}) => <h1>{user}</h1>}
+</UserCOntext.Consumer>
+```
+
+4. Contexts Provider can be nested , only the components inside the provider will have access to the state.
